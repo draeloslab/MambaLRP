@@ -7,7 +7,7 @@ from typing import Optional, List
 from transformers import MambaConfig
 
 try:
-    from mamba_ssm.ops.triton.layernorm import RMSNorm
+    from mamba_ssm.ops.triton.layer_norm import RMSNorm
 except ImportError:
     RMSNorm = None
 from mamba_ssm.ops.triton.selective_state_update import selective_state_update
