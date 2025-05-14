@@ -8,11 +8,11 @@ from transformers import MambaConfig
 
 try:
     from mamba_ssm.ops.triton.layernorm import RMSNorm
-    from mamba_ssm.ops.triton.selective_state_update import selective_state_update
-    from mamba_ssm.ops.selective_scan_interface import mamba_inner_fn, selective_scan_fn
-    from causal_conv1d import causal_conv1d_fn, causal_conv1d_update
 except ImportError:
     RMSNorm = None
+from mamba_ssm.ops.triton.selective_state_update import selective_state_update
+from mamba_ssm.ops.selective_scan_interface import mamba_inner_fn, selective_scan_fn
+from causal_conv1d import causal_conv1d_fn, causal_conv1d_update
 
 from mamba_lrp.lrp.core import ModifiedAct
 
